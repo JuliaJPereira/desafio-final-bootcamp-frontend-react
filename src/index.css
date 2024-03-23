@@ -1,4 +1,13 @@
-div {
-    background-color: gray;
+.div-body {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-header {
+    background-color: #c5c5c5;
     padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
