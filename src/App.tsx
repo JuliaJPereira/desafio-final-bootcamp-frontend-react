@@ -111,7 +111,7 @@ function App() {
         </Box>
 
         <span style={{ margin: '20px', textAlign: 'center' }}><strong>Campeonato Brasileiro de {year}</strong></span>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{ marginBottom: '50px' }}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
@@ -130,7 +130,9 @@ function App() {
               {data.map((row, i) => (
                 <StyledTableRow key={row.nome}>
                   <StyledTableCell component="th" scope="row">
-                  {i + 1} - {row.nome}
+                    <div style={{ display: 'flex', alignItems: 'center' }} >
+                      {i + 1}&nbsp;&nbsp;&nbsp;<img style={{ width: '30px' }} src={`public/img/${row.nome}.png`} />&nbsp;&nbsp;&nbsp;{row.nome}
+                    </div>
                   </StyledTableCell>
                   <StyledTableCell align="center">{row.pontos}</StyledTableCell>
                   <StyledTableCell align="center">{row.vitorias}</StyledTableCell>
